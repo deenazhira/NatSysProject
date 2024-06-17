@@ -458,12 +458,22 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
 ```bash 
 The user and group of the files created in the Docker container on the host VM will be root by default. This is because the container runs with root privileges unless otherwise specified.
+@deenazhira ➜ /workspaces/NatSysProject/myroot (main) $ ls -l /workspaces/NatSysProject/myroot
+total 4
+-rw-rw-rw- 1 root root 14 Jun 17 19:16 helloworld.txt
 ```
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
 
+```
+```bash
+Yes can change
+@deenazhira ➜ /workspaces/NatSysProject/myroot (main) $ sudo chown -R codespace:codespace /workspaces/NatSysProject/myroot
+@deenazhira ➜ /workspaces/NatSysProject/myroot (main) $ ls -l /workspaces/NatSysProject/myroot
+total 4
+-rw-rw-rw- 1 codespace codespace 14 Jun 17 19:16 helloworld.txt
 ```
 *** __Fill answer here__.***
 
