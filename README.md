@@ -1,6 +1,6 @@
 # Net&Sys Assignment: Running Containers for Application Development
 
-Group Name: __Fill your team name__. 
+Group Name: Bubbles 
 
 Team Mates:
 1. __Fill name__ and __matric no__
