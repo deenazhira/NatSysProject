@@ -348,16 +348,33 @@ cpu MHz         : 3127.436
 docker pull debian
 docker run --detach -it debian
 ```
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ docker pull debian
+Using default tag: latest
+latest: Pulling from library/debian
+fea1432adf09: Pull complete 
+Digest: sha256:a92ed51e0996d8e9de041ca05ce623d2c491444df6a535a566dabd5cb8336946
+Status: Downloaded newer image for debian:latest
+docker.io/library/debian:latest
+```
 2. This will run the debian container. To check if the debian container is running, type
 ```bash
 @joeynor ➜ /workspaces/OSProject (main) $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
 f65be1987f84   debian    "bash"    4 minutes ago   Up 4 minutes             romantic_jackson
 ```
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
+b274536834ff   debian    "bash"    17 seconds ago   Up 15 seconds             sharp_hodgkin
+```
 
 3. Keep note of the name used by your container, this is usually given random names unless you specify your own name. Now run a bash command on the container. Make sure you use the name of your container instead of the one shown here. 
 ```bash
 docker exec -i -t romantic_jackson /bin/bash
+```
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ docker exec -i -t sharp_hodgkin /bin/bash
 ```
 
 4. Create a file on the container. First you must make sure you are in the bash command prompt of the container. The container is new, and does not have any software other than the debian OS. To create a new file, you will need an editor installed. In the bash shell of the container, run the package manager apt-get to install nano text editor. 
