@@ -401,6 +401,15 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker restart romantic_jackson
 ```
+```bash 
+@deenazhira ➜ /workspaces/NatSysProject (main) $ docker stop sharp_hodgkin
+sharp_hodgkin
+@deenazhira ➜ /workspaces/NatSysProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                       PORTS     NAMES
+b274536834ff   debian    "bash"    10 minutes ago   Exited (137) 8 seconds ago             sharp_hodgkin
+@deenazhira ➜ /workspaces/NatSysProject (main) $ docker restart sharp_hodgkin
+sharp_hodgkin
+```
 
 7. Stop the container and delete the container. What happened to your helloworld.txt?
 
@@ -413,12 +422,22 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker rm romantic_jackson
 ```
+```bash 
+@deenazhira ➜ /workspaces/NatSysProject (main) $ docker stop sharp_hodgkin
+sharp_hodgkin
+@deenazhira ➜ /workspaces/NatSysProject (main) $ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                       PORTS     NAMES
+b274536834ff   debian    "bash"    13 minutes ago   Exited (137) 7 seconds ago             sharp_hodgkin
+@deenazhira ➜ /workspaces/NatSysProject (main) $ docker rm sharp_hodgkin
+sharp_hodgkin
+```
 
 ***Questions:***
 
 1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
+No, files created inside the container's file system are not persistent once the container is deleted. This is because Docker containers are designed to be ephemeral by nature. When you stop and remove a container, its file system is also removed unless you explicitly save or mount volumes to persist data.
 2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
-
+Yes, can run multiple instances of Debian Linux using Docker. Each instance will be a separate container and can run independently of others.
 ## Running your own container with persistent storage
 
 1. In the previous experiment, you might have notice that containers are not persistent. To make storage persistent, you will need to mount them. 
