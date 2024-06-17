@@ -109,20 +109,237 @@ codespace:x:1000:1000::/home/codespace:/bin/bash
 sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
 ```
 3. Run the command **df** . ***(1 mark)*** __Fill answer here__.
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+overlay         32847680 10380744  20772836  34% /
+tmpfs              65536        0     65536   0% /dev
+shm                65536        8     65528   1% /dev/shm
+/dev/root       30298176 24408024   5873768  81% /vscode
+/dev/loop3      32847680 10380744  20772836  34% /workspaces
+/dev/sda1       46127956      100  43752280   1% /tmp
+```
 4. Run the command **du** . ***(1 mark)*** __Fill answer here__.
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ du
+4       ./.git/branches
+8       ./.git/objects/1b
+8       ./.git/objects/83
+8       ./.git/objects/47
+8       ./.git/objects/71
+12      ./.git/objects/62
+16      ./.git/objects/58
+12      ./.git/objects/73
+8       ./.git/objects/a6
+8       ./.git/objects/04
+8       ./.git/objects/fd
+8       ./.git/objects/c1
+12      ./.git/objects/e5
+8       ./.git/objects/41
+8       ./.git/objects/7b
+8       ./.git/objects/24
+8       ./.git/objects/c6
+16      ./.git/objects/3d
+8       ./.git/objects/0b
+12      ./.git/objects/72
+12      ./.git/objects/d2
+8       ./.git/objects/86
+12      ./.git/objects/1c
+8       ./.git/objects/eb
+8       ./.git/objects/ab
+12      ./.git/objects/ff
+16      ./.git/objects/af
+8       ./.git/objects/74
+8       ./.git/objects/96
+12      ./.git/objects/70
+8       ./.git/objects/d8
+8       ./.git/objects/91
+8       ./.git/objects/c3
+8       ./.git/objects/3a
+12      ./.git/objects/17
+12      ./.git/objects/4e
+12      ./.git/objects/2e
+8       ./.git/objects/0d
+8       ./.git/objects/52
+8       ./.git/objects/fc
+8       ./.git/objects/6a
+8       ./.git/objects/e7
+16      ./.git/objects/fb
+8       ./.git/objects/fa
+8       ./.git/objects/4b
+12      ./.git/objects/6e
+12      ./.git/objects/b5
+8       ./.git/objects/49
+8       ./.git/objects/60
+8       ./.git/objects/fe
+8       ./.git/objects/20
+8       ./.git/objects/f6
+8       ./.git/objects/3f
+8       ./.git/objects/a3
+8       ./.git/objects/cd
+8       ./.git/objects/f2
+8       ./.git/objects/b2
+8       ./.git/objects/93
+8       ./.git/objects/81
+8       ./.git/objects/e9
+8       ./.git/objects/cb
+12      ./.git/objects/64
+8       ./.git/objects/b9
+8       ./.git/objects/b6
+8       ./.git/objects/4f
+8       ./.git/objects/4a
+4       ./.git/objects/info
+12      ./.git/objects/14
+1824    ./.git/objects/pack
+12      ./.git/objects/44
+2464    ./.git/objects
+8       ./.git/logs/refs/heads
+16      ./.git/logs/refs/remotes/origin
+20      ./.git/logs/refs/remotes
+32      ./.git/logs/refs
+40      ./.git/logs
+```
 5. Run the command **ls** . ***(1 mark)*** __Fill answer here__.
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ ls
+README.md  images
+```
 6. Run the command **ls -asl** . ***(1 mark)*** __Fill answer here__.
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ ls -asl
+total 36
+ 4 drwxrwxrwx+ 4 codespace root  4096 Jun 17 14:43 .
+ 4 drwxr-xrwx+ 5 codespace root  4096 Jun 17 14:43 ..
+ 4 drwxrwxrwx+ 9 codespace root  4096 Jun 17 15:49 .git
+20 -rw-rw-rw-  1 codespace root 19979 Jun 17 15:55 README.md
+ 4 drwxrwxrwx+ 2 codespace root  4096 Jun 17 14:43 images
+```
 7. Run the command **free -h** . ***(1 mark)*** __Fill answer here__.
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ free -h
+              total        used        free      shared  buff/cache   available
+Mem:          7.7Gi       1.4Gi       337Mi        67Mi       6.0Gi       6.0Gi
+Swap:            0B          0B          0B
+```
 8. Run the command **cat /proc/cpuinfo** . ***(1 mark)*** __Fill answer here__.
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ cat /proc/cpuinfo
+processor       : 0
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3025.194
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 0
+initial apicid  : 0
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.85
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:
+
+processor       : 1
+vendor_id       : AuthenticAMD
+cpu family      : 25
+model           : 1
+model name      : AMD EPYC 7763 64-Core Processor
+stepping        : 1
+microcode       : 0xffffffff
+cpu MHz         : 3127.436
+cache size      : 512 KB
+physical id     : 0
+siblings        : 2
+core id         : 0
+cpu cores       : 1
+apicid          : 1
+initial apicid  : 1
+fpu             : yes
+fpu_exception   : yes
+cpuid level     : 13
+wp              : yes
+flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext invpcid_single vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr rdpru arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload umip vaes vpclmulqdq rdpid fsrm
+bugs            : sysret_ss_attrs null_seg spectre_v1 spectre_v2 spec_store_bypass srso
+bogomips        : 4890.85
+TLB size        : 2560 4K pages
+clflush size    : 64
+cache_alignment : 64
+address sizes   : 48 bits physical, 48 bits virtual
+power management:
+```
 9. Run the command **top** and type **q** to quit. ***(1 mark)*** __Fill answer here__.
+```bash
+top - 15:04:39 up 23 min,  0 users,  load average: 0.07, 0.22, 0.39
+Tasks:  17 total,   1 running,  16 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  4.0 us,  4.2 sy,  0.0 ni, 91.6 id,  0.2 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7929.6 total,    254.5 free,   1339.9 used,   6335.2 buff/cache
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6207.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                           
+   2625 codespa+  20   0 1117764  63872  42112 S   1.3   0.8   0:01.69 node                                                              
+   2084 codespa+  20   0   21.5g 333116  49920 S   1.0   4.1   0:22.93 node                                                              
+      1 codespa+  20   0    1136    640    640 S   0.0   0.0   0:00.04 docker-init                                                       
+      7 codespa+  20   0    7236   1792   1792 S   0.0   0.0   0:00.01 sleep                                                             
+     49 root      20   0   12196   3608   2688 S   0.0   0.0   0:00.00 sshd                                                              
+   1238 codespa+  20   0    2616   1408   1408 S   0.0   0.0   0:00.01 sh                                                                
+   1268 root      20   0    2616   1536   1536 S   0.0   0.0   0:00.00 sh                                                                
+   1999 codespa+  20   0    2624   1664   1664 S   0.0   0.0   0:00.01 sh                                                                
+   2007 codespa+  20   0 1330508 105300  45440 S   0.0   1.3   0:05.47 node                                                              
+   2176 codespa+  20   0 1240308  52496  41344 S   0.0   0.6   0:00.26 node                                                              
+   3213 codespa+  20   0 1016148  78936  40832 S   0.0   1.0   0:00.84 node                                                              
+   3737 codespa+  20   0    2616   1536   1536 S   0.0   0.0   0:00.00 sh                                                                
+   3781 root      20   0    2616   1408   1408 S   0.0   0.0   0:00.00 sh                                                                
+   4001 root      20   0 1983176  82028  51968 S   0.0   1.0   0:00.29 dockerd                                                           
+   4008 root      20   0 1798832  41656  30080 S   0.0   0.5   0:00.39 containerd                                                        
+   4208 codespa+  20   0   16628  11520   3456 S   0.0   0.1   0:00.14 bash                                                              
+  12562 codespa+  20   0   10888   3456   3072 R   0.0   0.0   0:00.00 top    
+```
 10. Run the command **uname -a**. ***(1 mark)*** __Fill answer here__.
+```bash
+@deenazhira ➜ /workspaces/NatSysProject (main) $ uname -a
+Linux codespaces-71f930 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
 11. What is the available free memory in the system. ***(1 mark)*** __Fill answer here__.
+```bash
+6.0Gi
+```
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __Fill answer here__.
+```bash
+20772836
+```
 13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __Fill answer here__.
+```bash
+Version : 6.5.0-1021-azure , Hardware : x86_64
+```
 14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __Fill answer here__.
+```bash
+The ls command in Unix-like operating systems lists directory contents. The ls -asl  command combines several options that modify the output.
+```
 15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+```bash
+TLB size        : 2560 4K pages
+```
 16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __Fill answer here__.
+```bash
+cpu MHz         : 3127.436
+```
 17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** __Fill answer here__.
+```bash
+2625
+```
 
 ## Running your own container instance.
 
