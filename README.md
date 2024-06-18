@@ -447,10 +447,11 @@ sharp_hodgkin
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-No, files created inside the container's file system are not persistent once the container is deleted. This is because Docker containers are designed to be ephemeral by nature. When you stop and remove a container, its file system is also removed unless you explicitly save or mount volumes to persist data.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
-Yes, can run multiple instances of Debian Linux using Docker. Each instance will be a separate container and can run independently of others.
+1. Are files in the container persistent. Why not?. ***(1 mark)*** 
+Answer: No, files created inside the container's file system are not persistent once the container is deleted. This is because Docker containers are designed to be ephemeral by nature. When you stop and remove a container, its file system is also removed unless you explicitly save or mount volumes to persist data.
+
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** 
+Answer: Yes, can run multiple instances of Debian Linux using Docker. Each instance will be a separate container and can run independently of others.
 ## Running your own container with persistent storage
 
 1. In the previous experiment, you might have notice that containers are not persistent. To make storage persistent, you will need to mount them. 
