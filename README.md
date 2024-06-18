@@ -460,7 +460,7 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 The user and group of the files created in the Docker container on the host VM will be root by default. This is because the container runs with root privileges unless otherwise specified.
 @deenazhira ➜ /workspaces/NatSysProject/myroot (main) $ ls -l /workspaces/NatSysProject/myroot
 total 4
--rw-rw-rw- 1 root root 14 Jun 17 19:16 helloworld.txt
+-rw-rw-rw- 1 root root 14 Jun 17 19:16 helloworld.txtd
 ```
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
@@ -502,8 +502,24 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 ***Questions:***
 
 1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Fill answer here__.
+```bash
+Permission : drwxrwxrwx+
+user and group : root 
+@deenazhira ➜ /workspaces/NatSysProject/webpage (main) $ docker exec -it naughty_ritchie /bin/bash
+root@e8dbaebf3bda:/usr/local/apache2# ls -ld /usr/local/apache2/htdocs
+drwxrwxrwx+ 2 1000 1000 4096 Jun 18 06:19 /usr/local/apache2/htdocs
+```
 2. What port is the apache web server running. ***(1 mark)***
+```bash
+@deenazhira ➜ /workspaces/NatSysProject/webpage (main) $ docker ps
+CONTAINER ID   IMAGE     COMMAND              CREATED         STATUS         PORTS                                   NAMES
+e8dbaebf3bda   httpd     "httpd-foreground"   7 minutes ago   Up 7 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp   naughty_ritchie
+Apache web server port : 80 
+```
 3. What port is open for http protocol on the host machine? ***(1 mark)***
+```bash
+Host Machine HTTP Port : 8080
+```
 
 ## Create SUB Networks
 
