@@ -5,7 +5,7 @@ Group Name: Bubbles.
 Team Mates:
 1. Irdeena Zahierah Binti Zukipeli (2210496)
 2. Irdina binti Mohd Azman (2112432)
-3. __Fill name__ and __matric no__
+3. Husna Nadhirah Binti Khairul Anwar (2211170)
 
 ## Rules
 1. You are allowed to have **3 group** members.
