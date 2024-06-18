@@ -551,7 +551,9 @@ docker run -itd --net rednet --name c2 busybox sh
 ***Questions:***
 
 1. Describe what is busybox and what is command switch **--name** is for? . ***(2 mark)*** __Fill answer here__.
-2. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)***
+   Answer: BusyBox is a lightweight, multi-tool executable that combines many common Unix utilities into a single executable file. The --name command switch is used to specify the name of the BusyBox executable.
+   
+3. Explore the network using the command ```docker network ls```, show the output of your terminal. ***(1 mark)***
 ```bash
 @deenazhira ➜ /workspaces/NatSysProject/webpage (main) $ docker network ls
 NETWORK ID     NAME      DRIVER    SCOPE
